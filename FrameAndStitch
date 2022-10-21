@@ -1,0 +1,52 @@
+# import the necessary packages
+from matplotlib import pyplot as plt
+from imutils import paths
+import numpy as np
+import argparse
+import imutils
+import cv2
+import tkinter as tk
+import os
+
+from tkinter import Tk, filedialog
+root = Tk() # pointing root to Tk() to use it as Tk() in program.
+root.withdraw() # Hides small tkinter window.
+''
+root.attributes('-topmost', True) # Opened windows will be active. above all windows despite of selection.
+''
+open_images = filedialog.askdirectory() # Returns opened path as str
+open_file=filedialog.askopenfilename()
+print(open_images)
+print(open_file) 
+#Valid up to here
+
+##if _name_="_main_"
+    
+##StitchedImage = StitchImages(Image1, Image2)
+
+# Using SIFT to find the keypoints and descriptorsin the images
+##Sift = cv2.SIFT_create()
+##BaseImage_kp, BaseImage_des = Sift.detectAndCompute(cv2.cvtColor(BaseImage,cv2.COLOR_BGR2GRAY),None)
+##SecImage_kp, SecImage_des = Sift.detectAndCompute(cv2.cvtColor(SecImage,cv2.COLOR_BGR2GRAY),None)
+
+##BF_Matcher = cv2.BFMatcher()
+##InitialMatches = BF_Matcher.knnMatch(BaseImage_des,SecImage_des,k=2)
+
+##GoodMatches = []
+##form, ninInitialMatches:
+    if m.distance <0.75* n.distance:
+        GoodMatches.append([m])
+
+##if len(Matches) <4:
+    print("\nNot enough matches found between theimages.\n")
+    exit(0)
+# Storing coordinates of points corresponding to thematches found# in both the images
+##BaseImage_pts = []
+##SecImage_pts = []
+##for Match in Matches:
+##    BaseImage_pts.append(BaseImage_kp[Match[0].queryIdx].pt)
+##    SecImage_pts.append(SecImage_kp[Match[0].trainIdx].pt)
+# Changing the datatype to "float32" for finding homography
+##BaseImage_pts = np.float32(BaseImage_pts)
+##SecImage_pts = np.float32(SecImage_pts)
+
