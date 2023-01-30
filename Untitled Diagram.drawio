@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-01-24T14:35:31.575Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" version="20.8.0" etag="MnOfIpMmYympXABiAnXT" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-30T09:47:59.411Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15" version="20.8.0" etag="IV-I73bZn_6BYqRuX3ei" type="github">
   <diagram id="4LDFrXm33AA_0PNnnUKp" name="Page-1">
-    <mxGraphModel dx="1397" dy="1010" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1117" dy="808" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -19,19 +19,16 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-148" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="880" width="830" height="840" as="geometry" />
+          <mxGeometry x="880" width="830" height="910" as="geometry" />
         </mxCell>
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-153" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=8;" edge="1" parent="1" source="4b5cufJOFDPNWDq6bjIJ-147" target="4b5cufJOFDPNWDq6bjIJ-146">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="810" y="1000" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="415" y="920" />
-              <mxPoint x="1290" y="920" />
+              <mxPoint x="415" y="960" />
+              <mxPoint x="1290" y="960" />
             </Array>
           </mxGeometry>
-        </mxCell>
-        <mxCell id="4b5cufJOFDPNWDq6bjIJ-155" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=8;" edge="1" parent="1" source="4b5cufJOFDPNWDq6bjIJ-147" target="4b5cufJOFDPNWDq6bjIJ-148">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-147" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry width="830" height="910" as="geometry" />
@@ -86,7 +83,7 @@
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-20" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4b5cufJOFDPNWDq6bjIJ-15" target="4b5cufJOFDPNWDq6bjIJ-19">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4b5cufJOFDPNWDq6bjIJ-31" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4b5cufJOFDPNWDq6bjIJ-15" target="4b5cufJOFDPNWDq6bjIJ-22">
+        <mxCell id="4b5cufJOFDPNWDq6bjIJ-31" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="4b5cufJOFDPNWDq6bjIJ-15" target="4b5cufJOFDPNWDq6bjIJ-22">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="630" y="115" as="targetPoint" />
             <Array as="points">
@@ -142,7 +139,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-27" value="Train CV (7)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="640" y="350" width="120" height="60" as="geometry" />
+          <mxGeometry x="640" y="400" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-36" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;" edge="1" parent="1" source="4b5cufJOFDPNWDq6bjIJ-39">
           <mxGeometry relative="1" as="geometry">
@@ -150,7 +147,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-34" value="AI predictions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="480" y="585" width="120" height="60" as="geometry" />
+          <mxGeometry x="480" y="554.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;" edge="1" parent="1" source="4b5cufJOFDPNWDq6bjIJ-34" target="4b5cufJOFDPNWDq6bjIJ-39">
           <mxGeometry relative="1" as="geometry">
@@ -163,10 +160,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-39" value="Is it satisfying?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="20" y="575" width="80" height="80" as="geometry" />
+          <mxGeometry x="20" y="545" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-41" value="Sell product" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
-          <mxGeometry y="750" width="120" height="60" as="geometry" />
+          <mxGeometry y="680" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-44" value="1. Crop &amp;nbsp;growth predictions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry width="830" height="40" as="geometry" />
@@ -452,7 +449,7 @@
           <mxGeometry x="130" y="650" width="697" height="100" as="geometry" />
         </mxCell>
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-160" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;gradientColor=#b3b3b3;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="1760" y="10" width="830" height="840" as="geometry" />
+          <mxGeometry x="1760" width="830" height="910" as="geometry" />
         </mxCell>
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-161" value="&lt;b&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" vertex="1" parent="1">
           <mxGeometry x="2360" y="70" width="210" height="520" as="geometry" />
@@ -585,8 +582,8 @@
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-193" value="Sell product" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
           <mxGeometry x="1760" y="760" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4b5cufJOFDPNWDq6bjIJ-194" value="5. Microclimate predictions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="1760" y="10" width="830" height="40" as="geometry" />
+        <mxCell id="4b5cufJOFDPNWDq6bjIJ-194" value="5. Microclimate predictions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1760" width="830" height="40" as="geometry" />
         </mxCell>
         <mxCell id="4b5cufJOFDPNWDq6bjIJ-195" value="&lt;font size=&quot;1&quot;&gt;&lt;b&gt;&lt;u&gt;Risk related to the process:&lt;br&gt;&lt;/u&gt;&lt;/b&gt;(1) Need for more customers interviews&lt;br&gt;(3) Historical data are usually weekly based meaning that one year of historical data represents 52 timepoints. AI can require hundreds to thousands of timepoints.&lt;br&gt;(4)&amp;nbsp;Mismatch&amp;nbsp;between historical data and variables present in the simulator makes the calibration process thus artificial trajectories design difficult or impossible&lt;br&gt;(5) CV installation can be done with a mobile or a fixed system, both requiring agreement with the GH, in case this is not&amp;nbsp;feasible, we rely on simulators&lt;br&gt;(6) data collection depends on the number of cameras we have&amp;nbsp;set: 10 cameras can records 10 times per day. If the CV require 100 pictures to be trained then 10 days are sufficient. If it require 1000 pictures then 100 days to calibrate the CV. We ignore at the moment this specific aspect.&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=right;fillColor=#ffcccc;strokeColor=#36393d;" vertex="1" parent="1">
           <mxGeometry x="130" y="750" width="697" height="150" as="geometry" />
