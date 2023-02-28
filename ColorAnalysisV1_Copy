@@ -1,0 +1,132 @@
+#Author: Alexandre Sicard
+#This script generate a csv file with data related to picture colors for RGB cameras.
+#The current script requires to pre select the right pictures
+#Step one: chose the folders:
+#                            1/ Folder where the csv file must be create
+#                            2/ Folder with picture pre-harvest
+#                            3/ Folder with picture post-harvest
+#Step two: Calculation of the average B,R,G values per pixel and calculation of the sum of B,R,G values for the whole picture
+#Step three: Generation of the CSV file with the above categories
+#Step four: Projection of the data
+#
+#
+#Caution:What remains to be done? Date extraction, camera ID extraction to allow tracking over time.
+#Once this is done there will be no need to categorise the pictures with pre and post harvest.
+#Might need other calculation such as difference between various channels from consecutive days
+
+
+#Library necessary for this
+import numpy as np
+import pandas as pd
+import plotly.express as px
+import cv2
+import argparse
+import numpy
+import csv
+import tkinter as tk
+import os
+from os import listdir
+from os.path import isfile, join
+from pathlib import Path
+import matplotlib.pyplot as plt
+
+
+#Folder selection
+#Opens a dialog box to select 3 folder:
+from tkinter import Tk, filedialog
+root = Tk() # pointing root to Tk() to use it as Tk() in program.
+root.withdraw() # Hides small tkinter window.
+''
+root.attributes('-topmost', True) # Opened windows will be active. above all windows despite of selection.
+''
+open_images = filedialog.askdirectory()#Folder 1: Where to create the CSV
+open_images_pre = filedialog.askdirectory()#Folder 2: Where are the pictures pre-Harvest (Harvest day -1)
+open_images_post = filedialog.askdirectory()#Folder 3: Where are the pictures post-Harvest (Harvest day)
+
+os.chdir(open_images)
+if not os.path.exists("csv"):
+   os.makedirs("csv")
+
+# Check whether the CSV 
+# exists or not if not then create one.
+my_file = Path("csv/details.csv")
+  
+if my_file.is_file():
+    f = open(my_file, "w+")
+    with open('csv/details.csv', 'a', newline='') as file:
+        writer = csv.writer(file)
+#Define the name of columns within the CSV file.          
+        writer.writerow(["S.No.", "Name", "Height",
+                         "Width", "Channels",
+                         "Avg Blue", "Avg Red",
+                         "Avg Green","Sum Blue","Sum Red","Sum Green","Harvest Status"])
+    f.close()
+    pass
+    
+else:
+    with open('csv/details.csv', 'w', newline = '') as file:
+        writer = csv.writer(file)
+          
+        writer.writerow(["S.No.", "Name", "Height",
+                         "Width", "Channels",
+                         "Avg Blue", "Avg Red",
+                         "Avg Green","Sum Blue","Sum Red","Sum Green","Harvest Status"])
+  
+
+
+mypath1 = open_images_pre #Can be simplified)
+mypath2 = open_images_post #Can be simplified)
+onlyfiles1 = [ f for f in listdir(mypath1) if not f.startswith(".") and isfile(join(mypath1,f))  ]#Generate the list of pictures pre-Harvest. Can add a selector for specific picture extension.
+onlyfiles2 = [ f for f in listdir(mypath2) if not f.startswith(".") and isfile(join(mypath2,f))  ]#Generate the list of pictures post-Harvest. Can add a selector for specific picture extension.
+images1 = numpy.empty(len(onlyfiles1), dtype = object)
+images2 = numpy.empty(len(onlyfiles2), dtype = object) 
+
+#For pre-Harvest Pictures
+for n in range(0, len(onlyfiles1)):
+    
+    path = join(mypath1,onlyfiles1[n])
+    images1[n] = cv2.imread(join(mypath1,onlyfiles1[n]),
+                           cv2.IMREAD_UNCHANGED)
+      
+    img = cv2.imread(path)
+    h,w,c = img.shape #Define the height(h), width(w) and number of color channels(c)
+ 
+    Status="Pre"  #Add a value to identify pre-harvest pictures
+    avg_color_per_row = numpy.average(img, axis = 0) #Calculate each rows average values for each color channel
+    avg_color = numpy.average(avg_color_per_row, axis = 0) #Calculate each channels average
+    sum_color_per_row=numpy.sum(img,axis=0) #Calculate each rows cumulative values for all channels
+    sum_color=numpy.sum(sum_color_per_row,axis=0)#Calculate each channels cumulative values
+    #Fills the CSV file with the selected values, if the values do not correspond to a pre-made columns it will just end in a column without label  
+    with open('csv/details.csv', 'a', newline = '') as file:
+        writer = csv.writer(file)
+        writer.writerow([n+1, onlyfiles1[n], h, w, c, 
+                         avg_color[0], avg_color[1],
+                         avg_color[2],sum_color[0],sum_color[1],sum_color[2],Status])
+        file.close()
+
+#For post-Harvest pictures
+for n in range(0, len(onlyfiles2)):
+    
+    path = join(mypath2,onlyfiles2[n])
+    images2[n] = cv2.imread(join(mypath2,onlyfiles2[n]),
+                           cv2.IMREAD_UNCHANGED)
+      
+    img = cv2.imread(path)
+    h,w,c = img.shape
+    Status="Post" 
+    avg_color_per_row = numpy.average(img, axis = 0)
+    avg_color = numpy.average(avg_color_per_row, axis = 0)
+    sum_color_per_row=numpy.sum(img,axis=0)
+    sum_color=numpy.sum(sum_color_per_row,axis=0)
+      
+    with open('csv/details.csv', 'a', newline = '') as file:
+        writer = csv.writer(file)
+        writer.writerow([n+1, onlyfiles2[n], h, w, c, 
+                         avg_color[0], avg_color[1],
+                         avg_color[2],sum_color[0],sum_color[1],sum_color[2],Status])
+        file.close()
+#For data projection (Work in progress)        
+##df = pd.read_csv('csv/details.csv',sep=",")
+##df.head()
+##fig = px.bar(df, x = 'Avg Red','Avg Blue','Avg Green')
+##fig.show()
